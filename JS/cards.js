@@ -1,5 +1,5 @@
 /*cards */
-let basedata = "https://desafio30js-default-rtdb.firebaseio.com/posts/.json";
+let basedata = "localhost:3002/post";
 
 const getAllCards = async (card) => {
     let response = await fetch(

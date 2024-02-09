@@ -3,6 +3,7 @@ document.querySelectorAll("#post-form input").forEach((input) => {
       document.getElementById("form-alert").classList.add("d-none");
     });
   });
+
   let saveButton = document.getElementById("save-post")
   let titleField = document.getElementById("title");
   let descriptionField = document.getElementById("description");
@@ -30,7 +31,7 @@ document.querySelectorAll("#post-form input").forEach((input) => {
   const createPostInDb = async (postObject) => {
    
     let response = await fetch(
-      "https://desafio30js-default-rtdb.firebaseio.com/posts/.json",
+      "http://localhost:3002/post",
       {
         method: "POST",
         body: JSON.stringify(postObject),
